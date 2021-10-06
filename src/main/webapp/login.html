@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login Page</title>
+</head>
+<body>
+
+<form action="LoginServlet" method="post">
+	Username : <input type="text" name="user">
+	<br>
+	Password : <input type="password" name="password">
+	<br>
+	<input type="submit" value="login">
+</form>
+
+<script>
+ const text = document.querySelector('#user');
+ const texterror = document.querySelector('.text-error')
+ text.addEventListener('input', function() {
+	 let pattern = RegExp('^[A-Z]{1}[a-z]{2,}$');
+	 if (pattern.test(text.value))
+		 texterror.textContent = ' ';
+	 else
+		 texterror.textContent = 'Name is Incorrect!';
+	 });
+ console.log(user);
+
+ </script>
+</body>
+</html>
